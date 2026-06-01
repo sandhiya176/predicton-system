@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Disease</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🏥 Disease Prediction System</h1>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predict" class="active">Predict Disease</a></li>
+                <li><a href="/records">View Records</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="prediction-form">
+            <h2>Patient Information & Symptom Checker</h2>
+            
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label>Patient Name:</label>
+                    <input type="text" id="patientName" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Age:</label>
+                        <input type="number" id="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <select id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact:</label>
+                        <input type="tel" id="contact">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Symptoms (Select at least one):</label>
+                    <div class="symptoms-grid" id="symptomsGrid">
+                        <!-- Symptoms will be loaded here -->
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Predict Disease</button>
+            </form>
+
+            <div id="result" class="result-card" style="display: none;">
+                <h3>Prediction Result</h3>
+                <div id="predictionResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

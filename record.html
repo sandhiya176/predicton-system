@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Records</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🏥 Disease Prediction System</h1>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predict">Predict Disease</a></li>
+                <li><a href="/records" class="active">View Records</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="records-section">
+            <h2>Patient Prediction Records</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by name or disease...">
+            </div>
+            <div id="recordsList" class="records-list"></div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
